@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: move;
+        animation-duration: 4s;
+
+        /* 애니메이션이 종료된 이후에 최종 상태를 유지 */
+        animation-fill-mode: forwards;
+
+        /* 애니메이션을 일시 정지 */
+        animation-play-state: paused;
+
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes move {
+        from {
+          left: 0;
+        }
+        to {
+          left: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="start">시작</button>
+      <button id="paused">일시 정지</button>
+    </div>
+    <script>
+      // div 요소 선택
+      const box = document.querySelector("div");
+
+      // id가 "start"인 요소에 클릭 이벤트 리스너 추가
+      const startButton = document.getElementById("start");
+
+      startButton.addEventListener("click", function () {
+        // 클릭 이벤트가 발생했을 때 실행될 코드
+        box.style.animationPlayState = "running";
+      });
+
+      document.getElementById("paused").addEventListener("click", function () {
+        box.style.animationPlayState = "paused";
+      });
+    </script>
+  </body>
+</html>

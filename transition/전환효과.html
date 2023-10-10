@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+        - 전환 (transition) 효과 : 요소의 속성이 변경될 때 부드럽게 변경되는 효과를 제공
+        */
+
+      .red-box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-delay: 0.02s;
+      }
+
+      .red-box:hover {
+        width: 200px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red-box">red-box</div>
+  </body>
+</html>
