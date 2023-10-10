@@ -1,0 +1,63 @@
+div {
+  color: red;
+}
+
+p:nth-child(3) {
+  color: aqua;
+}
+
+.parent {
+  font-size: 10px;
+
+  /* 색상의 키워드 표기법 */
+  background-color: black;
+}
+
+.child {
+  /* 부모의 두 배 */
+  font-size: 200%;
+
+  /* bold는 절대값, bolder은 부모 대비 상대값 */
+  font-weight: bolder;
+
+  /* 색상의  */
+  background-color: rgb(200, 200, 30);
+
+  font-style: oblique;
+}
+
+.child-to-child {
+  /* 화면(뷰포트) 너비의 4% */
+  font-size: 4vw;
+
+  /* 투명도 설정, 1(불투명), 0(투명) */
+  background-color: rgb(10, 10, 10, 0.3);
+}
+
+h1 {
+  /* 색상 16진수 표기법 */
+  color: #363;
+  font-family: fantasy;
+}
+
+h1 {
+  display: block;
+
+  /* 양쪽 정렬 */
+  text-align: justify;
+
+  font-variant: small-caps;
+}
+
+h2 {
+  /* display: inline; */
+  text-align: center;
+}
+
+.line {
+  /* 글자 사이 간격 */
+  letter-spacing: 3px;
+  line-height: 2em;
+  font-size: 20pt;
+  text-shadow: 4px 4px 2px orchid;
+}

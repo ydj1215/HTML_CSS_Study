@@ -1,0 +1,27 @@
+.parent {
+  display: flex;
+}
+
+.a {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(197, 197, 197);
+  margin: 0;
+  flex-direction: row; /* 가로로 배치 */
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+.a:hover {
+  background-color: black;
+  color: white;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

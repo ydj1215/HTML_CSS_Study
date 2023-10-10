@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-weight: bold;
+      }
+      label {
+        min-width: 80px;
+        display: inline-block; /* 필수 */
+      }
+      input {
+        width: 50%;
+      }
+      button {
+        text-align: center;
+        width: 100px;
+        height: 50px;
+        border-color: gainsboro;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>아이패드 주문하기</h1>
+    <fieldset class="bold">
+      <legend>배송 정보</legend>
+      <br />
+      <form action="#">
+        <label>주문 상품</label>
+        <input value="아이패드 12.9인치" readonly />
+        <br />
+        <br />
+        <label>이름</label>
+        <input type="text" />
+        <br />
+        <br />
+        <label>배송 주소</label>
+        <input type="text" required />
+        <br />
+        <br />
+        <label>이메일</label>
+        <input type="text" />
+        <br />
+        <br />
+        <label>연락처</label>
+        <input
+          type="tel"
+          placeholder="하이픈 빼고 입력해주세요.(01012345678)"
+        />
+        <br />
+        <br />
+        <label>배송 지정</label>
+        <input type="date" />
+        <label>(주문일로부터 최소 3일 이후)</label>
+        <br />
+      </form>
+      <br />
+    </fieldset>
+    <br />
+    <button style="margin-left: 300px; margin-right: 20px">주문하기</button>
+    <button>취소하기</button>
+  </body>
+</html>

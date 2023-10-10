@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 스타일을 적용하여 입력 필드와 라벨을 원하는 모양으로 꾸밉니다. */
+      .form-group {
+        display: flex; /* Flexbox를 활성화합니다. */
+        align-items: center; /* 요소를 세로로 가운데 정렬합니다. */
+        margin-bottom: 10px; /* 아래쪽 여을 추가합니다. */
+        margin-left: 30px;
+      }
+
+      .form-group label {
+        min-width: 60px; /* 라벨의 최소 너비 설정 */
+        font-weight: bold;
+      }
+
+      .form-group input {
+        /* flex-grow: 1; 입력 필드가 남은 공간을 모두 차지하도록 설정 */
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>예약 정보</h2>
+    <div>
+      <form action="#">
+        <div class="form-group">
+          <label for="name">이름</label>
+          <input type="text" id="name" />
+        </div>
+        <div class="form-group">
+          <label for="phone">휴대폰</label>
+          <input type="text" id="phone" />
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="text" id="email" />
+        </div>
+        <div class="form-group">
+          <button style="font-weight: bold">예약하기</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <br>
+    <!-- select boc = combo box -->
+    <form action="#">
+      <fieldset>
+        <legend>개인 정보 입력</legend>
+        <label for="city">지역</label>
+        <select id="city" size="7" multiple>
+          <optgroup label="서울시">
+            <option value="강북구">강북구</option>
+            <option value="강남구">강남구</option>
+            <option value="서초구">서초구</option>
+          </optgroup>
+          <optgroup label="경기도 성남시">
+            <option value="중원구">중원구</option>
+            <option value="분당구" selected>분당구</option>
+          </optgroup>
+        </select>
+        <input type="submit" value="등록" />
+      </fieldset>
+    </form>
+
+    <form>
+      <button type="submit">
+        <img src="../images/facebook.png" />
+        페이스북 버튼
+      </button>
+    </form>
+
+    <form>
+        <input type="text" disabled>
+        <button type="button" disabled>비활성화된 버튼</button>
+    </form>
+    <fieldset>
+        <!--checked 속성 : 여러개의 아이템을 선택할 때 사용-->
+        <legend>좋아하는 과일을 선택하시오</legend>
+        <input type="checkbox" id = "banana" value="banana"  name = "fruit" checked>
+        <label for="banana">바나나</label>
+        <input type="checkbox" id = "apple" value="apple"  name = "fruit" checked>
+        <label for="apple">사과</label>
+        <input type="checkbox" id = "grape" value="grape"  name = "fruit" checked>
+        <label for="grape">포도</label>
+    </fieldset>
+    <form action = "#">
+        <input type = "tel" placeholder="전화번호를 입력하세요" required>
+        <button type="submit">전송</button>
+    </form>
+
+  </body>
+</htm>

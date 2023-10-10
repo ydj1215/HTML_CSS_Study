@@ -1,0 +1,55 @@
+button {
+  width: 200px;
+  height: 60px;
+  background-color: blueviolet;
+  color: white;
+  /* 전환효과 */
+  transition: 0.5s ease-in;
+}
+
+/* hover : 마우스 커서가 올라갈 때
+active : 마우스 클릭이 발생할 때
+*/
+button:hover {
+  width: 202px;
+  height: 62px;
+  background-color: violet;
+  color: black;
+}
+
+button:active {
+  width: 198px;
+  height: 58px;
+  background-color: darkgray;
+  color: #eee;
+}
+
+/* 특정 상태 */
+/* 입력, 체크 등 */
+input:focus {
+  background-color: lightblue;
+}
+
+input:disabled {
+  background-color: red;
+}
+
+input:checked + label {
+  background-color: blue;
+}
+
+/*  */
+
+li:first-child {
+  color: red;
+}
+
+/* 부모의 모든 자식 요소 중 n번째 자식 요소 선택 */
+p:nth-child(2) {
+  color: turquoise;
+  font-size: 1.2em;
+}
+
+p:nth-of-type(2) {
+  background-color: azure;
+}

@@ -1,0 +1,32 @@
+p {
+  display: flex;
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  /* 중앙 */
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  margin: 15px;
+  border: 1px solid orange;
+  border-radius: 20px;
+}
+
+/* box-shadow: [가로 거리] [세로 거리] [흐림 정도] [그림자 색상];
+ */
+.box1 {
+  box-shadow: 2px -2px 5px 0px;
+}
+
+.box2 {
+  box-shadow: 5px 5px 15px 5px orange;
+}
