@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* 
+      /*
         - postion 속성 : 요소의 위치를 지정하는데 사용하는 속성
         - static : 기본 속성, 요소를 문서의 흐름에 따라 배치
         - relative : 요소를 기본 위치(원래 위치)에서 상대적으로 이동
@@ -13,8 +13,40 @@
         - fixed : 요소를 뷰포트 기준으로 절대적인 위치에 배치
         - sticky : 요소가 스크롤 되는 동안 상위 요소에 고정되도록 지정
       */
+      body {
+        margin: 0;
+        height: 4000px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        position: relative;
+      }
+      .red-box {
+        background-color: red;
+        position: relative;
+        /* 같은 형제끼리 적용, postion:static이면 안된다.*/
+        z-index: 1;
+      }
+      .green-box {
+        background-color: green;
+        left: 100px;
+        top: 0px;
+        /* position: sticky; */
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+      }
+      /* .blue-box {
+        background-color: blue;
+      } */
     </style>
   </head>
-
-  <body></body>
+  <body>
+    <div class="box red-box">red-box</div>
+    <div class="box green-box">green-box</div>
+    <div class="box blue-box">blue-box</div>
+  </body>
 </html>
