@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&family=Roboto&display=swap");
+
+    .parent {
+      text-align: center;
+      position: relative;
+      top: 200px;
+      left: 100px;
+      height: 300px;
+      background-color: #ffff99;
+      width: 300px;
+      padding: 18px;
+      transform: rotate(10deg);
+
+      /* border: 1px solid black; */
+    }
+
+    .title {
+      font-family: "Nanum Pen Script";
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-family: "Nanum Pen Script";
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .add {
+      /* 삼각형 만들기 */
+      width: 0px;
+      height: 0px;
+      border-bottom: 20px solid white;
+      border-top: 20px solid transparent;
+      border-left: 40px solid transparent;
+      border-right: 40px solid white;
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .add2 {
+      /* 삼각형 만들기 */
+      width: 0px;
+      height: 0px;
+      border-bottom: 20px solid gold;
+      border-top: 20px solid transparent;
+      border-left: 40px solid transparent;
+      border-right: 40px solid gold;
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      transform: rotate(180deg);
+    }
+  </style>
+  <body>
+    <div class="parent">
+      <div class="title">TO. 남편</div>
+      <div class="content">
+        여보~ 오늘 급하게 먼저 출근해야 해서<br />
+        인사도 못하고 먼저 나가요~
+      </div>
+      <div class="content">
+        아침 굶지 말고 냉장고에 있는 반찬<br />
+        전자레인지에 데워서 챙겨 먹고 나가요~!
+      </div>
+      <div class="content">
+        그럼 오늘 하루도 힘내고 이따 저녁에 봐요~<br />화이팅~!
+      </div>
+      <div class="add"></div>
+      <div class="add2"></div>
+    </div>
+  </body>
+</html>
