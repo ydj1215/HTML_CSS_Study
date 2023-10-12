@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="슬라이드.css" />
+  </head>
+  <body>
+    <div class="slidebox">
+      <input type="radio" name="slide" id="slide01" checked />
+      <input type="radio" name="slide" id="slide02" />
+      <input type="radio" name="slide" id="slide03" />
+      <input type="radio" name="slide" id="slide04" />
+
+      <ul class="slidelist">
+        <li class="slideitem">
+          <a><img src="./img/slide01.jpg" /></a>
+        </li>
+        <li class="slideitem">
+          <a><img src="./img/slide02.jpg" /></a>
+        </li>
+        <li class="slideitem">
+          <a><img src="./img/slide03.jpg" /></a>
+        </li>
+        <li class="slideitem">
+          <a><img src="./img/slide04.jpg" /></a>
+        </li>
+      </ul>
+
+      <div class="slide-control">
+        <!-- 첫 번째 슬라이드 화살표 컨트롤 -->
+        <div class="control01">
+          <!-- 첫 번째 슬라이드에서 귀로가면 네 번째 -->
+          <label for="slide04" class="prev"></label>
+          <label for="slide02" class="next"></label>
+        </div>
+
+        <!-- 두 번째 슬라이드 화살표 컨트롤 -->
+        <div class="control02">
+          <label for="slide01" class="prev"></label>
+          <label for="slide03" class="next"></label>
+        </div>
+
+        <!-- 세 번째 슬라이드 화살표 컨트롤 -->
+        <div class="control03">
+          <label for="slide02" class="prev"></label>
+          <label for="slide04" class="next"></label>
+        </div>
+
+        <!-- 네 번째 슬라이드 화살표 컨트롤 -->
+        <div class="control04">
+          <label for="slide03" class="prev"></label>
+          <label for="slide01" class="next"></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

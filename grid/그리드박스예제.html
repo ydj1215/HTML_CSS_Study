@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        margin: 10px;
+      }
+
+      .item:nth-child(1),
+      .item:nth-child(3),
+      .item:nth-child(5),
+      .item:nth-child(7),
+      .item:nth-child(9) {
+        background-color: coral;
+      }
+
+      .item:nth-child(2),
+      .item:nth-child(4),
+      .item:nth-child(6),
+      .item:nth-child(8),
+      .item:nth-child(10) {
+        background-color: orange;
+      }
+
+      @media (max-width: 500px) {
+        .container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-areas:
+            "box1 box2 box2"
+            "box3 box2 box2"
+            "box4 box5 box6"
+            "box7 box8 box9"
+            "box10 box10 box10";
+        }
+
+        .item {
+          height: 100px;
+        }
+
+        .box1 {
+          grid-area: box1;
+        }
+
+        .box2 {
+          grid-area: box2;
+          height: 220px;
+        }
+
+        .box3 {
+          grid-area: box3;
+        }
+
+        .box4 {
+          grid-area: box4;
+        }
+
+        .box5 {
+          grid-area: box5;
+        }
+
+        .box6 {
+          grid-area: box7;
+        }
+        .box8 {
+          grid-area: box8;
+        }
+
+        .box9 {
+          grid-area: box9;
+        }
+
+        .box10 {
+          grid-area: box10;
+        }
+      }
+
+      @media (min-width: 500px) {
+        .container {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-template-areas:
+            "box1 box2 box2 box3 box3"
+            "box4 box2 box2 box5 box5"
+            "box6 box7 box8 box9 box10";
+        }
+
+        .item {
+          height: 100px;
+        }
+
+        .box1 {
+          grid-area: box1;
+        }
+
+        .box2 {
+          grid-area: box2;
+          height: 220px;
+        }
+
+        .box3 {
+          grid-area: box3;
+        }
+
+        .box4 {
+          grid-area: box4;
+        }
+
+        .box5 {
+          grid-area: box5;
+        }
+
+        .box6 {
+          grid-area: box7;
+        }
+        .box8 {
+          grid-area: box8;
+        }
+
+        .box9 {
+          grid-area: box9;
+        }
+
+        .box10 {
+          grid-area: box10;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item box1">1</div>
+      <div class="item box2">2</div>
+      <div class="item box3">3</div>
+      <div class="item box4">4</div>
+      <div class="item box5">5</div>
+      <div class="item box6">6</div>
+      <div class="item box7">7</div>
+      <div class="item box8">8</div>
+      <div class="item box9">9</div>
+      <div class="item box10">10</div>
+    </div>
+  </body>
+</html>

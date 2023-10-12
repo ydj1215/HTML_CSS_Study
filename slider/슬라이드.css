@@ -1,0 +1,103 @@
+.slidebox {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 1~4의 사진들이 세로가 아니라 가로(슬라이드)로 배치가 되게 */
+.slidebox .slidelist {
+  position: relative;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+}
+.slidebox .slidelist .slideitem {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  width: 100%;
+  transition: all 1s;
+}
+
+.slidebox .slidelist .slideitem > a {
+  display: block;
+  width: auto;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+.slidebox .slide-control [class*="control"] label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* padding값을 안주면 화면에 표시X */
+  padding: 20px;
+
+  /* 화살표에 마우스를 올리면 커서가 손가락 모양으로 변경 */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* 화살표 */
+.prev {
+  left: -50px;
+  background: #333 url("./img/left-arrow.png") center center / 50% no-repeat;
+}
+
+.next {
+  right: -50px;
+  background: #333 url("./img/right-arrow.png") center center / 50% no-repeat;
+}
+
+/* ◎○○○ 표시 */
+/*
+<input type="radio" name="slide" id="slide01" checked />
+*/
+[name="slide"] {
+  display: none;
+}
+
+/* 현재 활성화된 슬라이드에 따라 슬라이드 아이템의 위치 조정 */
+
+/* (checked) slide01이 체크되었을 때, (~) 해당 요소 이후에 있는 */
+#slide01:checked ~ .slidelist .slideitem {
+  left: 0;
+}
+
+#slide02:checked ~ .slidelist .slideitem {
+  left: -100%;
+}
+
+#slide03:checked ~ .slidelist .slideitem {
+  left: -200%;
+}
+
+#slide04:checked ~ .slidelist .slideitem {
+  left: -300%;
+}
+
+/* 슬라이더 컨트롤 아이콘 숨김 및 활성화 슬라이더 컨트롤 표시 설정 */
+.slide-control [class*="control"] {
+  display: none;
+}
+
+#slide01:checked ~ .slide-control .control01 {
+  display: block;
+}
+
+#slide02:checked ~ .slide-control .control02 {
+  display: block;
+}
+
+#slide03:checked ~ .slide-control .control03 {
+  display: block;
+}
+
+#slide04:checked ~ .slide-control .control04 {
+  display: block;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        /* 1:3:2의 비율로 맞추겠다. */
+        /* grid-template-columns: 1fr 3fr 2fr; */
+
+        /* grid-template-columns: 100px 1fr 100px; */
+
+        /* 
+        - auto-fit : 개수를 자동으로 조절하여 가능한 많은 칼럼을 표시하도록 하는 것, 자동 채우기, 컨테이너가 기준
+        - auto-fill : 자동 채우기, 아이템이 기준
+        - minmax(최소값, 최대값)
+        */
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        /* grid-template-rows: 100px 100px; */
+        grid-template-rows: repeat(2, minmax(50px, auto));
+        column-gap: 10px;
+        row-gap: 10px;
+      }
+
+      .item {
+        box-shadow: 0px 0px 3px 0px green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item:nth-child(2),
+      .item:nth-child(4) {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">그리드 박스 1번</div>
+      <div class="item">그리드 박스 2번</div>
+      <div class="item">그리드 박스 3번</div>
+      <div class="item">그리드 박스 4번</div>
+      <div class="item">그리드 박스 5번</div>
+      <div class="item">그리드 박스 6번</div>
+      <div class="item">그리드 박스 7번</div>
+    </div>
+  </body>
+</html>

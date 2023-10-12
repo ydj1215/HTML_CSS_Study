@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* 리셋 CSS */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .slider-container {
+        display: grid;
+        overflow: hidden;
+      }
+      .slides {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        transition: transform 1s ease;
+      }
+      .slide {
+        width: 100%;
+      }
+      .arrow {
+        font-size: 35pt;
+        cursor: pointer;
+      }
+
+      .prev {
+        position: absolute;
+        align-self: center;
+        z-index: 20;
+      }
+
+      .next {
+        position: absolute;
+        top: 100px;
+        right: 100px;
+      }
+
+      img {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="arrow prev">&lt;</div>
+      <div class="slides">
+        <div class="slide">
+          <!-- 첫 번째 슬라이드 내용 -->
+          <img src="img/slide01.jpg" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <!-- 두 번째 슬라이드 내용 -->
+          <img src="img/slide02.jpg" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <!-- 세 번째 슬라이드 내용 -->
+          <img src="img/slide03.jpg" alt="Slide 3" />
+        </div>
+        <div class="slide">
+          <img src="img/slide01.jpg" alt="Slide 3" />
+        </div>
+        <div class="slide">
+          <img src="img/slide02.jpg" alt="Slide 3" />
+        </div>
+        <div class="slide">
+          <img src="img/slide03.jpg" alt="Slide 3" />
+        </div>
+      </div>
+      <div class="arrow next">&gt;</div>
+    </div>
+    <script>
+      // JavaScript를 사용하여 슬라이드 구현
+      const slides = document.querySelector(".slides");
+      const prevArrow = document.querySelector(".prev");
+      const nextArrow = document.querySelector(".next");
+      let slideIndex = 0;
+
+      function updateSlidePosition() {
+        slides.style.transform = `translateX(-${slideIndex * 100 * 0.3}%)`;
+      }
+
+      prevArrow.addEventListener("click", () => {
+        if (slideIndex > 0) {
+          slideIndex--;
+          updateSlidePosition();
+        }
+      });
+
+      nextArrow.addEventListener("click", () => {
+        if (slideIndex < 2) {
+          slideIndex++;
+          updateSlidePosition();
+        }
+      });
+    </script>
+  </body>
+</html>

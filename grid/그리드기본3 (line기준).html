@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        max-width: 700px;
+        display: grid;
+        gap: 10px;
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 100px);
+      }
+
+      .icon,
+      .header,
+      .sider,
+      .content,
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon {
+        background-color: skyblue;
+
+        /* 선이 기준 */
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      .header {
+        background-color: orangered;
+        /* grid-column-start: 2;
+        grid-column-end: 5; */
+
+        /* 위를 한번에 아래와 같이 작성 가능 */
+        grid-column: 2/5;
+      }
+
+      .sider {
+        background-color: aquamarine;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+      .content {
+        background-color: antiquewhite;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+
+      .footer {
+        background-color: violet;
+        grid-column-start: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">icon</div>
+      <div class="header">header</div>
+      <div class="sider">sider</div>
+      <div class="content">content</div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
